@@ -27,7 +27,7 @@ echo "<table>
         <th>model</th>
         <th>color</th>
         <th>year</th>
-      <tr>";
+      </tr>";
 
 // перебрать все строки результата в виде ассоц. массивов      
 while($car = $result->fetch_assoc()){
@@ -37,6 +37,11 @@ while($car = $result->fetch_assoc()){
   echo "<td>" . $car['year'] . "</td>";
   echo "</tr>";
 }
+echo "</table>";
+
+echo "<a href='/gp/add_car.php'>add new car</a>";
 
 $result->free();
 $mysqli->close();
+
+?>

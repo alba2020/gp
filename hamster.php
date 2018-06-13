@@ -82,9 +82,12 @@ function printHamsters(array $hamsters) {
       echo "<td>" . $h['age'] . "</td>";
       echo "<td>" . $h['profession'] . "</td>";
       echo "<td>" . $h['weight'] . "</td>";
+      echo "<td><a href='/gp/delete_hamster.php?del=" . $h['id'] . "'><input type='button' value='delete'/></a></td>";
       echo "</tr>";
+      
     }
     echo "</table>";
+    echo "<a href='/gp/add_hamster.php'><input type='button' value='add new hamster'/></a>";
   }
 
 function printHamster($h) {
@@ -176,6 +179,8 @@ function printHamster($h) {
       // echo "<p> The biggest hamster:" . getMaxWeightHamsterName($hamsters) . "</p>";
     }
   ?>
+
+
 
 </body>
 </html>
